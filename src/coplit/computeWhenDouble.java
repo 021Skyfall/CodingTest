@@ -2,7 +2,9 @@ package coplit;
 
 // 연이율을 입력받아 원금이 2배 이상이 될 때까지 걸리는 시간(년)을 리턴해야 합니다.
 
-public class b_computeWhenDouble {
+//int 타입을 리턴해야 합니다.
+
+public class computeWhenDouble {
     public static void main(String[] args) {
         int output = computeWhenDouble(7);
 //        System.out.println(output); // --> 11

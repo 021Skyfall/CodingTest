@@ -1,6 +1,10 @@
 package coplit;
 
-public class e_firstReverse {
+// 문자열을 입력받아 순서가 뒤집힌 문자열을 리턴해야 합니다.
+
+//String 타입을 리턴해야 합니다.
+
+public class firstReverse {
     public static void main(String[] args) {
         String output = firstReverse("codestates");
         System.out.println(output); // "setatsedoc"

@@ -4,7 +4,10 @@ import java.util.HashMap;
 
 // 배열을 입력받아 차례대로 배열의 첫 요소와 마지막 요소를 키와 값으로 하는 HashMap을 리턴해야 합니다.
 
-public class a_transformFirstAndLast {
+//빈 배열을 입력받은 경우, null을 리턴해야 합니다.
+//입력으로 받는 배열을 수정하지 않아야 합니다.
+
+public class transformFirstAndLast {
     public static void main(String[] args) {
         String[] arr = new String[]{"Queen", "Elizabeth", "Of Hearts", "Beyonce"};
         HashMap<String, String> output = transformFirstAndLast(arr);
