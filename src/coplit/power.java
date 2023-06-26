@@ -13,7 +13,7 @@ public class power {
         long output = power(3, 40);
         System.out.println(output); // --> 19334827
     }
-    public static long power(int base, int exponent) {
+    private static long power(int base, int exponent) {
         if (exponent == 0) return 1;
         long result = power(base, exponent/2);
         if (exponent % 2 == 0) {

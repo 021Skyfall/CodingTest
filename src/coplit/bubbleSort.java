@@ -25,7 +25,7 @@ public class bubbleSort {
         int[] output = bubbleSort1(new int[]{2, 1, 3});
         System.out.println(Arrays.toString(output)); // --> [1, 2, 3]
     }
-    public static int[] bubbleSort1(int[] arr) {
+    private static int[] bubbleSort1(int[] arr) {
         // 전달인자 배열 길이 만큼 반복
         for (int i = 0; i < arr.length; i++) {
             // 정렬할 요소 체크

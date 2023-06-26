@@ -18,7 +18,7 @@ public class powerSet {
         ArrayList<String> output2 = powerSet("jjump");
         System.out.println(output2); // ["", "j", "jm", "jmp", "jmpu", "jmu", "jp", "jpu", "ju", "m", "mp", "mpu", "mu", "p", "pu", "u"]
     }
-    public static ArrayList<String> powerSet(String str) {
+    private static ArrayList<String> powerSet(String str) {
         String dedup = dedup(str);
         Stack<String> stack = new Stack<>();
 

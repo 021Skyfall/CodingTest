@@ -12,7 +12,7 @@ public class decryptCaesarCipher {
         String output = decryptCaesarCipher("khoor", 3);
         System.out.println(output); // --> hello
     }
-    public static String decryptCaesarCipher(String str, int secret) {
+    private static String decryptCaesarCipher(String str, int secret) {
         // 기준 알파벳
         String al = "abcdefghijklmnopqrstuvwxyz";
         StringBuilder result = new StringBuilder();

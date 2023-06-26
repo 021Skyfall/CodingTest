@@ -11,7 +11,7 @@ public class powerOfTwo {
         boolean output1 = powerOfTwo(16);
         System.out.println(output1); // true
     }
-    public static boolean powerOfTwo(long num) {
+    private static boolean powerOfTwo(long num) {
         if (num == 1) return true;
 
         long x = 2;

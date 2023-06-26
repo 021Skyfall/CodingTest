@@ -21,7 +21,7 @@ public class convertListToObject {
         HashMap<String, String> output = convertListToHashMap(arr);
         System.out.println(output);
     }
-    public static HashMap<String, String> convertListToHashMap(String[][] arr) {
+    private static HashMap<String, String> convertListToHashMap(String[][] arr) {
         HashMap<String, String> map = new LinkedHashMap<>();
         if (arr.length == 0) return map;
         for (int i = 0; i < arr.length; i++) {

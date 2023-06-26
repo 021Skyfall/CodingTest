@@ -14,7 +14,7 @@ public class readVertically {
         String output = readVertically(input);
         System.out.println(output); // --> "hweolllrod"
     }
-    public static String readVertically(String[] arr) {
+    private static String readVertically(String[] arr) {
         // 배열 요소 중 가장 긴 길이 추출
         int max = 0;
         for (int i = 0; i < arr.length; i++) {

@@ -11,7 +11,7 @@ public class firstCharacter {
         String output = firstCharacter("hello world");
         System.out.println(output); // --> "hw"
     }
-    public static String firstCharacter(String str) {
+    private static String firstCharacter(String str) {
         if (str.isEmpty()) return "";
         String[] split = str.split(" ");
         String result = "";

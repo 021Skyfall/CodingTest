@@ -27,7 +27,7 @@ public class isSubsetOf {
         System.out.println(output2);
         System.out.println(end2 - start2 + " ns");
     }
-    public static boolean isSubsetOf(int[] base, int[] sample) {
+    private static boolean isSubsetOf(int[] base, int[] sample) {
         List<Integer> list = Arrays.stream(base).boxed().collect(Collectors.toList());
         for (int i : sample) {
             if (list.contains(i)) return true;
@@ -35,7 +35,7 @@ public class isSubsetOf {
         return false;
     }
 
-    public static boolean isSubsetOf2(int[] base, int[] sample) {
+    private static boolean isSubsetOf2(int[] base, int[] sample) {
         //O(N^2)
         base = Arrays.stream(base).sorted().toArray();
         sample = Arrays.stream(sample).sorted().toArray();

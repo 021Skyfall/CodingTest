@@ -20,7 +20,7 @@ public class orderOfPresentation {
         int output = orderOfPresentation(5, new int[]{1, 3, 2, 4, 5});
         System.out.println(output); // 6
     }
-    public static int orderOfPresentation(int N, int[] K) {
+    private static int orderOfPresentation(int N, int[] K) {
         // N개의 조가 있을 때 발표순서를 중복없는 경우의 수로 나타낸 뒤
         // K 라는 발표순서가 담긴 안쪽배열의 순서를 리턴하면 됨
         // 순열 문제

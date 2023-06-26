@@ -10,7 +10,7 @@ public class compressString {
         String output = compressString("wwwggoppopppp");
         System.out.println(output); // --> "3wggoppo4p"
     }
-    public static String compressString(String str) {
+    private static String compressString(String str) {
         // 엣지
         if (str.length() == 0) return "";
 

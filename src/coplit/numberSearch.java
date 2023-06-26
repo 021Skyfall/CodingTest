@@ -9,7 +9,7 @@ public class numberSearch {
     public static void main(String[] args) {
         System.out.println(numberSearch("Hello6 9World 2,")); // --> 2
     }
-    public static int numberSearch(String str) {
+    private static int numberSearch(String str) {
         // 찾아야 하는 숫자를 문자열로 모두 선언
         String digits = "0123456789";
 

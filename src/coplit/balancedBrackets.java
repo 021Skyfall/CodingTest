@@ -26,7 +26,7 @@ public class balancedBrackets {
         boolean output3 = balancedBrackets("[(]{)}");
         System.out.println(output3); // --> false
     }
-    public static boolean balancedBrackets(String str) {
+    private static boolean balancedBrackets(String str) {
         Stack<String> box = new Stack<>();
         // for -> str 탐색
         for (int i = 0; i < str.length(); i++) {
@@ -50,7 +50,7 @@ public class balancedBrackets {
         // 아니라면 남은게 있음
         return box.size() == 0;
     }
-    public static boolean balancedBrackets1(String str) {
+    private static boolean balancedBrackets1(String str) {
         Stack<Character> stack = new Stack<>();
         // hashmap 선언 후 쌍이 맞는 괄호를 키와 값으로 할당
         HashMap<Character, Character> opener = new HashMap<>();

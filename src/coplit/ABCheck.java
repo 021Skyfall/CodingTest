@@ -13,7 +13,7 @@ public class ABCheck {
         boolean output = ABCheck("lane Borrowed");
         System.out.println(output); // --> true
     }
-    public static boolean ABCheck(String str) {
+    private static boolean ABCheck(String str) {
         str = str.toLowerCase();
         for (int i = 4; i < str.length(); i++) {
             if (str.charAt(i-4) == 'a' && str.charAt(i) == 'b' ||

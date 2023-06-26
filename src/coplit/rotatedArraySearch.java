@@ -22,7 +22,7 @@ public class rotatedArraySearch {
         System.out.println(end1 - start1 + " ns");
     }
     // O(N)
-    public static int rotatedArraySearch(int[] rotated, int target) {
+    private static int rotatedArraySearch(int[] rotated, int target) {
         for (int i = 0; i < rotated.length; i++) {
             int x = rotated[i];
             if (x == target) return i;
@@ -30,7 +30,7 @@ public class rotatedArraySearch {
         return -1;
     }
     // O(logN)
-    public static int rotatedArraySearch2(int[] rotated, int target) {
+    private static int rotatedArraySearch2(int[] rotated, int target) {
         int left = 0;
         int right = rotated.length - 1;
 

@@ -21,7 +21,7 @@ public class fibonacci {
     // fibo(10)
     // = fibo(9) + fibo(8)
     // = fibo(8) + fibo(7) + fibo(7) + fibo(6)
-    public static int fibonacci(int num) {
+    private static int fibonacci(int num) {
         ArrayList<Integer> memo = new ArrayList<>();
         memo.add(0);
         memo.add(1);

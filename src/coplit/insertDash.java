@@ -9,7 +9,7 @@ public class insertDash {
         String output = insertDash("454793");
         System.out.println(output); // --> 4547-9-3
     }
-    public static String insertDash(String str) {
+    private static String insertDash(String str) {
         String result = String.valueOf(str.charAt(0));
 
         for (int i = 1; i < str.length(); i++) {

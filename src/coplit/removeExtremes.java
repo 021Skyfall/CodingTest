@@ -16,7 +16,7 @@ public class removeExtremes {
         String[] output = removeExtremes(new String[]{"where", "is", "the", "longest", "word"});
         System.out.println(Arrays.toString(output)); // --> ["where", "the", "word"]
     }
-    public static String[] removeExtremes(String[] arr) {
+    private static String[] removeExtremes(String[] arr) {
         if (arr.length == 0) return null;
 
         String[] result = new String[arr.length-2];

@@ -11,7 +11,7 @@ public class letterCapitalize {
         String output1 = letterCapitalize("hello world");
         System.out.println(output1); // "Hello World"
     }
-    public static String letterCapitalize(String str) {
+    private static String letterCapitalize(String str) {
         if (str.isEmpty()) return "";
 
         String[] arr = str.split(" ");

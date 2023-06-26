@@ -9,7 +9,7 @@ public class isIsogram {
     public static void main(String[] args) {
         System.out.println(isIsogram("Dermatoglyphics")); // true
     }
-    public static boolean isIsogram(String str) {
+    private static boolean isIsogram(String str) {
         String result = "";
         str = str.toLowerCase();
 

@@ -11,7 +11,7 @@ public class computeSquareRoot {
         String output = computeSquareRoot(6);
         System.out.println(output); // --> "2.45"
     }
-    public static String computeSquareRoot(int num) {
+    private static String computeSquareRoot(int num) {
         // 소수점 3자리부터 반올림, 배열에 소수점 자리만큼 double 값 할당
         double[] diffs = new double[]{1, 0.1, 0.01, 0.001};
         // 초기값으로 1 설정

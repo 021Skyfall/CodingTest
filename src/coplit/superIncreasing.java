@@ -10,7 +10,7 @@ public class superIncreasing {
         boolean output = superIncreasing(new int[]{1, 3, 5, 10});
         System.out.println(output); // --> false
     }
-    public static boolean superIncreasing(int[] arr) {
+    private static boolean superIncreasing(int[] arr) {
         int sum = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] <= sum) return false;

@@ -12,7 +12,7 @@ public class tiling {
         int output = tiling(4);
         System.out.println(output); // --> 5
     }
-    public static int tiling(int num) {
+    private static int tiling(int num) {
         // O(N)
         // 인덱스 관리를 위해 더미로 채움
         ArrayList<Integer> memo = new ArrayList<>(Arrays.asList(0,1,2));

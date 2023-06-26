@@ -9,7 +9,7 @@ public class firstReverse {
         String output = firstReverse("codestates");
         System.out.println(output); // "setatsedoc"
     }
-    public static String firstReverse(String str) {
+    private static String firstReverse(String str) {
         char[] arr = str.toCharArray();
         char[] result = new char[arr.length];
         for (int i = 0; i < arr.length; i++) {

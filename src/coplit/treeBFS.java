@@ -20,7 +20,7 @@ public class treeBFS {
         ArrayList<String> output = bfs(root);
         System.out.println(output); // --> ["1", "2", "3", "4", "5"]
     }
-    public static ArrayList<String> bfs(tree node) {
+    private static ArrayList<String> bfs(tree node) {
         // 탐색을 위한 큐
         Queue<tree> queue = new LinkedList<>();
         // 결과
@@ -43,7 +43,7 @@ public class treeBFS {
         return result;
     }
     //아래 클래스의 내용은 수정하지 말아야 합니다.
-    public static class tree {
+    private static class tree {
         private String value;
         private ArrayList<tree> children;
 

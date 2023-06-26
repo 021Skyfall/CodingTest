@@ -9,7 +9,7 @@ public class computeWhenDouble {
         int output = computeWhenDouble(7);
 //        System.out.println(output); // --> 11
     }
-    public static int computeWhenDouble(double interestRate) {
+    private static int computeWhenDouble(double interestRate) {
         double rate = 1 + interestRate / 100;
         System.out.println("이율 : " + rate + "\n");
         double principal = 1;

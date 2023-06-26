@@ -14,7 +14,7 @@ public class reverseArr {
         int[] output = reverseArr(new int[] {1,2,3});
         System.out.println(Arrays.toString(output)); // --> [3, 2, 1]
     }
-    public static int[] reverseArr(int[] arr){
+    private static int[] reverseArr(int[] arr){
         // base case
         if (arr.length == 0) return new int[]{};
         // head

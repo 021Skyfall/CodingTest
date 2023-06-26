@@ -18,7 +18,7 @@ public class treeDFS {
         ArrayList<String> output = dfs(root);
         System.out.println(output); // --> ["1", "2", "4", "5", "3"]
     }
-    public static ArrayList<String> dfs(tree node) {
+    private static ArrayList<String> dfs(tree node) {
         // 결과
         ArrayList<String> values = new ArrayList<>();
         // 시작 노드
@@ -37,7 +37,7 @@ public class treeDFS {
         return values;
     }
     //아래 클래스의 내용은 수정하지 말아야 합니다.
-    public static class tree {
+    private static class tree {
         private String value;
         private ArrayList<tree> children;
 
@@ -52,11 +52,11 @@ public class treeDFS {
             return children.get(children.size() - 1);
         }
 
-        public String getValue() {      //현재 노드의 데이터를 반환
+        private String getValue() {      //현재 노드의 데이터를 반환
             return value;
         }
 
-        public ArrayList<tree> getChildrenNode() {
+        private ArrayList<tree> getChildrenNode() {
             return children;
         }
     }
