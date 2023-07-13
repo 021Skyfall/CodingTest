@@ -8,10 +8,12 @@ public class LeapYear {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int year = Integer.parseInt(br.readLine());
 
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        if (year % 4 == 0 & year % 100 != 0 | year % 400 == 0)
             System.out.println(1);
         else System.out.println(0);
 
         br.close();
     }
+
+    // 충격! & 연산자 && 도 되고 & 도 됨 !!
 }
