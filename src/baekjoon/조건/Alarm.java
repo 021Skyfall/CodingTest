@@ -19,7 +19,7 @@ public class Alarm {
         }
         if (m == 60)
             m = 0;
-        System.out.println(h + " " + m);
+        System.out.println(h+ " " +m);
         }
     }
 }
