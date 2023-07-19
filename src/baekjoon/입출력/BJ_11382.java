@@ -3,7 +3,7 @@ package baekjoon.입출력;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class LinePlus {
+public class BJ_11382 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();

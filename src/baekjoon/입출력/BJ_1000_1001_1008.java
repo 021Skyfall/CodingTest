@@ -5,7 +5,7 @@ package baekjoon.입출력;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class AB {
+public class BJ_1000_1001_1008 {
     public static void main(String[] args) throws IOException {
         firstCal();
 

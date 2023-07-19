@@ -3,7 +3,7 @@ package baekjoon.조건;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class ThreeOfDice {
+public class BJ_2480 {
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String dice = br.readLine();

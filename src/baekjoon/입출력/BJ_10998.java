@@ -2,7 +2,7 @@ package baekjoon.입출력;
 
 import java.util.Scanner;
 
-public class multi {
+public class BJ_10998 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();

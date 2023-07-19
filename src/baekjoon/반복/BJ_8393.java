@@ -3,13 +3,16 @@ package baekjoon.반복;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class gugudan {
+public class BJ_8393 {
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
+        br.close();
+        int result = 0;
 
-        for (int i = 1; i < 10; i++) {
-            System.out.println(n + " * " + i + " = " + n*i);
+        for (int i = 1; i <= n; i++) {
+            result += i;
         }
+        System.out.println(result);
     }
 }

@@ -3,7 +3,7 @@ package baekjoon.조건;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Alarm {
+public class BJ_2884 {
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String time = br.readLine();

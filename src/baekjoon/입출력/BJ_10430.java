@@ -2,7 +2,7 @@ package baekjoon.입출력;
 
 import java.util.Scanner;
 
-public class sameCal {
+public class BJ_10430 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int A = scanner.nextInt();

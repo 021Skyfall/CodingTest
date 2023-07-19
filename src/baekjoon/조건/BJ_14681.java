@@ -3,7 +3,7 @@ package baekjoon.조건;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Quadrant {
+public class BJ_14681 {
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int a = Integer.parseInt(br.readLine());

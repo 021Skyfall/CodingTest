@@ -3,7 +3,7 @@ package baekjoon.조건;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class LeapYear {
+public class BJ_2753 {
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int year = Integer.parseInt(br.readLine());
