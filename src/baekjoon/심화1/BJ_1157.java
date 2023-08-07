@@ -7,8 +7,8 @@ public class BJ_1157 {
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        String str = br.readLine().toUpperCase();
-
-        // 1 - X
+//
+//         1 - X
 //        int count = 0;
 //        String result = "";
 //        for (int i = 0; i < str.length(); i++) {
