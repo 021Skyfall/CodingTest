@@ -2,6 +2,7 @@ package baekjoon.약수배수소수;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
@@ -13,17 +14,31 @@ public class BJ_2501 {
 
         int n = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
-        Stack<Integer> stack = new Stack<>();
+//        Stack<Integer> stack = new Stack<>();
+//
+//        for (int i = 1; i <= n; i++) {
+//            if (n % i == 0) {
+//                stack.add(i);
+//            }
+//        }
+//
+//        if (stack.size() < k)
+//            System.out.println(0);
+//        else
+//            System.out.println(stack.get(k - 1));
+
+        ArrayList<Integer> result = new ArrayList<>();
 
         for (int i = 1; i <= n; i++) {
             if (n % i == 0) {
-                stack.add(i);
+                result.add(i);
             }
         }
 
-        if (stack.size() < k)
+        if (result.size() < k) {
             System.out.println(0);
-        else
-            System.out.println(stack.get(k - 1));
+        } else {
+            System.out.println(result.get(k - 1));
+        }
     }
 }
