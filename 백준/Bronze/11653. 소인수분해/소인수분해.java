@@ -8,13 +8,17 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         int k = 2;
 
-        while(n != 1) {
+        while(k * k <= n) {
             if (n % k == 0) {
                 System.out.println(k);
                 n /= k;
             } else {
                 k++;
             }
+        }
+
+        if (n > 1) {
+            System.out.println(n);
         }
     }
 }
