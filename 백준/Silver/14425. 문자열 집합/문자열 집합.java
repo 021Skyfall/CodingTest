@@ -16,14 +16,10 @@ public class Main {
         for (int i = 0; i < n; i++) {
             list.add(br.readLine());
         }
-        String[] arr = new String[m];
-        for (int i = 0; i < m; i++) {
-            arr[i] = br.readLine();
-        }
 
         int count = 0;
-        for (String s : arr) {
-            if (list.contains(s))
+        for (int i = 0 ; i < m; i++) {
+            if (list.contains(br.readLine()))
                 count++;
         }
         System.out.println(count);
