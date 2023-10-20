@@ -21,7 +21,7 @@ public class Main {
         System.out.println(resultA/gcd + " " + resultB/gcd);
     }
     public static int gcd(int x, int y) {
-        while (y == 0) {
+        if (y == 0) {
             return x;
         }
         return gcd(y, x%y);
