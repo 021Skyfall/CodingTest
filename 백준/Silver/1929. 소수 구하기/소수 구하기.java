@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -12,19 +11,18 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
 
         boolean[] isPrime = new boolean[n + 1];
-        Arrays.fill(isPrime, true);
-        isPrime[0] = isPrime[1] = false;
+        isPrime[0] = isPrime[1] = true;
 
-        for(int i=2; i*i<=n; i++){
-            if(isPrime[i]){
-                for(int j=i*i; j<=n; j+=i) {
-                    isPrime[j] = false;
+        for(int i=2; i <= Math.sqrt(n); i++){
+            if(!isPrime[i]) {
+                for(int j = i * i; j <= n; j += i) {
+                    isPrime[j] = true;
                 }
             }
         }
         StringBuilder sb = new StringBuilder();
         for (int i = m; i <= n; i++) {
-            if (isPrime[i]) sb.append(i).append('\n');
+            if (!isPrime[i]) sb.append(i).append('\n');
         }
         System.out.println(sb);
     }
