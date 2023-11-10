@@ -59,4 +59,28 @@ public class Main {
             }
         }
     }
+
+    // + bfs method
+    public static void bfs(int x, int y) {
+        Queue<int[]> q = new LinkedList<>();
+        visited[x][y] = true;
+        q.offer(new int[]{x, y});
+        count++;
+
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            for (int i = 0; i < 4; i++) {
+                int nx = cur[0] + dx[i];
+                int ny = cur[1] + dy[i];
+
+                if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
+                    if (map[nx][ny] == 1 && !visited[nx][ny]) {
+                        q.offer(new int[]{nx, ny});
+                        visited[nx][ny] = true;
+                        count++;
+                    }
+                }
+            }
+        }
+    }
 }
