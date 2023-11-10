@@ -28,7 +28,8 @@ public class Main {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (map[i][j] == 1 && !visited[i][j]) {
-                    bfs(i, j);
+                    dfs(i, j);
+                    //bfs(i, j);
                     result.add(count);
                     count = 0;
                 }
@@ -42,24 +43,17 @@ public class Main {
         }
     }
 
-    public static void bfs(int x, int y) {
-        Queue<int[]> q = new LinkedList<>();
+    public static void dfs(int x, int y) {
         visited[x][y] = true;
-        q.offer(new int[]{x, y});
         count++;
 
-        while (!q.isEmpty()) {
-            int[] cur = q.poll();
-            for (int i = 0; i < 4; i++) {
-                int nx = cur[0] + dx[i];
-                int ny = cur[1] + dy[i];
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
 
-                if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
-                    if (map[nx][ny] == 1 && !visited[nx][ny]) {
-                        q.offer(new int[]{nx, ny});
-                        visited[nx][ny] = true;
-                        count++;
-                    }
+            if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
+                if (map[nx][ny] == 1 && !visited[nx][ny]) {
+                    dfs(nx, ny);
                 }
             }
         }
