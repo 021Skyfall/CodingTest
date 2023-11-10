@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     static int[] dx = {-1, 0, 1, 0};
@@ -30,7 +28,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (map[i][j] == 1 && !visited[i][j]) {
-                    dfs(i, j);
+                    bfs(i, j);
                     result.add(count);
                     count = 0;
                 }
@@ -44,17 +42,24 @@ public class Main {
         }
     }
 
-    public static void dfs(int x, int y) {
+    public static void bfs(int x, int y) {
+        Queue<int[]> q = new LinkedList<>();
         visited[x][y] = true;
+        q.offer(new int[]{x, y});
         count++;
 
-        for (int i = 0; i < 4; i++) {
-            int nx = x + dx[i];
-            int ny = y + dy[i];
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            for (int i = 0; i < 4; i++) {
+                int nx = cur[0] + dx[i];
+                int ny = cur[1] + dy[i];
 
-            if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
-                if (map[nx][ny] == 1 && !visited[nx][ny]) {
-                    dfs(nx, ny);
+                if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
+                    if (map[nx][ny] == 1 && !visited[nx][ny]) {
+                        q.offer(new int[]{nx, ny});
+                        visited[nx][ny] = true;
+                        count++;
+                    }
                 }
             }
         }
