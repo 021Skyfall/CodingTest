@@ -26,37 +26,31 @@ public class Main {
     public static void bfs(int start, int end) {
         visited[start] = true;
         arr[start] = 0;
-        
+
         Queue<Integer> q = new LinkedList<>();
         q.offer(start);
 
         while (!q.isEmpty()) {
             int cur = q.poll();
-            
+
             if (cur == end) {
                 break;
             }
-            
-            if (cur - 1 >= 0) {
-                if (!visited[cur - 1]) {
-                    q.offer(cur - 1);
-                    visited[cur - 1] = true;
-                    arr[cur - 1] = arr[cur] + 1;
-                }
+
+            if (cur - 1 >= 0 && !visited[cur - 1]) {
+                q.offer(cur - 1);
+                visited[cur - 1] = true;
+                arr[cur - 1] = arr[cur] + 1;
             }
-            if (cur + 1 < max) {
-                if (!visited[cur + 1]) {
-                    q.offer(cur + 1);
-                    visited[cur + 1] = true;
-                    arr[cur + 1] = arr[cur] + 1;
-                }
+            if (cur + 1 < max && !visited[cur + 1]) {
+                q.offer(cur + 1);
+                visited[cur + 1] = true;
+                arr[cur + 1] = arr[cur] + 1;
             }
-            if (cur * 2 < max) {
-                if (!visited[cur * 2]) {
-                    q.offer(cur * 2);
-                    visited[cur * 2] = true;
-                    arr[cur * 2] = arr[cur] + 1;
-                }
+            if (cur * 2 < max && !visited[cur * 2]) {
+                q.offer(cur * 2);
+                visited[cur * 2] = true;
+                arr[cur * 2] = arr[cur] + 1;
             }
         }
     }
