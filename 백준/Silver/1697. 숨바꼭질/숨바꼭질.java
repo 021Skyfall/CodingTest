@@ -26,12 +26,17 @@ public class Main {
     public static void bfs(int start, int end) {
         visited[start] = true;
         arr[start] = 0;
-
+        
         Queue<Integer> q = new LinkedList<>();
         q.offer(start);
 
         while (!q.isEmpty()) {
             int cur = q.poll();
+            
+            if (cur == end) {
+                break;
+            }
+            
             if (cur - 1 >= 0) {
                 if (!visited[cur - 1]) {
                     q.offer(cur - 1);
