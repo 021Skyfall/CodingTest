@@ -23,10 +23,10 @@ public class Main {
             int y = Integer.parseInt(st.nextToken()) - 1;
             arr[x][y] = arr[y][x] = 1;
         }
-        
         for (int i = 0; i < n; i++) {
             if (!visited[i]) {
-                dfs(i);
+//                dfs(i);
+                bfs(i);
                 count++;
             }
         }
@@ -40,6 +40,22 @@ public class Main {
         for (int i = 0; i < n; i++) {
             if (arr[v][i] == 1 && !visited[i]) {
                 dfs(i);
+            }
+        }
+    }
+
+    public static void bfs(int v) {
+        visited[v] = true;
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(v);
+
+        while (!q.isEmpty()) {
+            v = q.poll();
+            for (int i = 0; i < n; i++) {
+                if (arr[v][i] == 1 && !visited[i]) {
+                    q.offer(i);
+                    visited[i] = true;
+                }
             }
         }
     }
