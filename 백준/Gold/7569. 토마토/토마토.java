@@ -12,7 +12,6 @@ public class Main {
 
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Scanner sc = new Scanner(System.in);
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int m = Integer.parseInt(st.nextToken());
