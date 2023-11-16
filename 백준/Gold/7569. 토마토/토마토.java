@@ -8,7 +8,6 @@ public class Main {
     static int[] dy = {0, 1, 0, -1, 0, 0};
     static int[] dz = {0, 0, 0, 0, -1, 1};
     static Queue<int[]> q = new LinkedList<>();
-    static int count = 0;
 
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
