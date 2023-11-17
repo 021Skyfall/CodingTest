@@ -33,6 +33,7 @@ public class Main {
                     if (arr[j][k] > i && !visited[j][k]) {
                         count++;
                         dfs(i,j,k);
+                        // bfs(i,j,k);
                     }
                 }
             }
@@ -52,6 +53,28 @@ public class Main {
             if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
                 if (arr[nx][ny] > i && !visited[nx][ny]) {
                     dfs(i, nx, ny);
+                }
+            }
+        }
+    }
+
+    public static void bfs(int i, int x, int y) {
+        visited[x][y] = true;
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(new int[]{x,y});
+
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+
+            for (int l = 0; l < 4; l++) {
+                int nx = cur[0] + dx[l];
+                int ny = cur[1] + dy[l];
+
+                if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
+                    if (arr[nx][ny] > i && !visited[nx][ny]) {
+                        q.offer(new int[]{nx,ny});
+                        visited[nx][ny] = true;
+                    }
                 }
             }
         }
