@@ -9,17 +9,8 @@ public class Main {
     static int[] dy = {1, 2, 2, 1, -1, -2, -2, -1};
     static boolean[][] visited;
     static int[][] arr;
-    static Node start, end;
+    static int[] start, end;
     static int l;
-
-    static class Node {
-        int x, y;
-
-        public Node(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
 
 
     public static void main(String[] args) throws java.io.IOException {
@@ -36,13 +27,13 @@ public class Main {
                 int x = Integer.parseInt(st.nextToken());
                 int y = Integer.parseInt(st.nextToken());
                 if (i == 0) {
-                    start = new Node(x, y);
+                    start = new int[]{x, y};
                 } else {
-                    end = new Node(x, y);
+                    end = new int[]{x, y};
                 }
             }
 
-            if (start.x == end.x && start.y == end.y) {
+            if (start[0] == end[0] && start[1] == end[1]) {
                 System.out.println(0);
                 continue;
             }
@@ -52,26 +43,26 @@ public class Main {
     }
 
     public static void bfs() {
-        Queue<Node> q = new LinkedList<>();
+        Queue<int[]> q = new LinkedList<>();
         q.offer(start);
-        visited[start.x][start.y] = true;
+        visited[start[0]][start[1]] = true;
 
         while(!q.isEmpty()) {
-            Node node = q.poll();
-            if (node.x == end.x && node.y == end.y) {
-                System.out.println(arr[end.x][end.y]);
+            int[] cur = q.poll();
+            if (cur[0] == end[0] && cur[1] == end[1]) {
+                System.out.println(arr[end[0]][end[1]]);
                 return;
             }
 
             for (int i = 0; i < 8; i++) {
-                int nx = node.x + dx[i];
-                int ny = node.y + dy[i];
+                int nx = cur[0] + dx[i];
+                int ny = cur[1] + dy[i];
 
                 if (nx >= 0 && ny >= 0 && nx < l && ny < l) {
                     if (!visited[nx][ny]) {
-                        q.offer(new Node(nx, ny));
+                        q.offer(new int[]{nx, ny});
                         visited[nx][ny] = true;
-                        arr[nx][ny] = arr[node.x][node.y] + 1;
+                        arr[nx][ny] = arr[cur[0]][cur[1]] + 1;
                     }
                 }
             }
