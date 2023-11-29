@@ -28,7 +28,6 @@ class Point implements Comparable<Point> {
 public class Main {
     static int[] dx = {-1, 0, 1, 0}, dy = {0, -1, 0, 1};
     static int[][] arr;
-    static int[][] dist;
     static int n, x, y, size = 2, count = 0, time = 0;
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
