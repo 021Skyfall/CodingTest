@@ -12,13 +12,13 @@ public class Main {
         long a = Integer.parseInt(st.nextToken());
         long b = Integer.parseInt(st.nextToken());
 
-        Queue<Object[]> q = new LinkedList<>();
-        q.add(new Object[]{a, 1});
+        Queue<long[]> q = new LinkedList<>();
+        q.add(new long[]{a, 1});
 
         while (!q.isEmpty()) {
-            Object[] cur = q.poll();
-            long value = (long) cur[0];
-            int count = (int) cur[1];
+            long[] cur = q.poll();
+            long value = cur[0];
+            long count = cur[1];
 
             if (value == b) {
                 System.out.println(count);
@@ -26,11 +26,11 @@ public class Main {
             }
 
             if (value * 2 <= b) {
-                q.add(new Object[]{value * 2, count + 1});
+                q.add(new long[]{value * 2, count + 1});
             }
 
             if (value * 10 + 1 <= b) {
-                q.add(new Object[]{value * 10 + 1, count + 1});
+                q.add(new long[]{value * 10 + 1, count + 1});
             }
         }
 
