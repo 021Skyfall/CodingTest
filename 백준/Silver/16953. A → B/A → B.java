@@ -5,14 +5,12 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
-    static long a;
-    static long b;
     public static void main(String[] args) throws java.io.IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        a = Integer.parseInt(st.nextToken());
-        b = Integer.parseInt(st.nextToken());
+        long a = Integer.parseInt(st.nextToken());
+        long b = Integer.parseInt(st.nextToken());
 
         Queue<Object[]> q = new LinkedList<>();
         q.add(new Object[]{a, 1});
