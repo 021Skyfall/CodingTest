@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -37,7 +39,7 @@ public class Main {
             boolean isBipartite = true;
             for(int i=1; i <= v; i++) {
                 if(color[i] == 0) {
-                    if(dfs(i, 1)) {
+                    if(bfs(i)) {
                         isBipartite = false;
                         break;
                     }
@@ -45,6 +47,26 @@ public class Main {
             }
             System.out.println(isBipartite ? "YES" : "NO");
         }
+    }
+
+    static boolean bfs(int start) {
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(start);
+        color[start] = 1;
+
+        while (!q.isEmpty()) {
+            int node = q.poll();
+
+            for (int i : tree[node]) {
+                if (color[i] == 0) {
+                    color[i] = 3 - color[node];
+                    q.offer(i);
+                } else if (color[i] == color[node]) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     static boolean dfs(int node, int c) {
