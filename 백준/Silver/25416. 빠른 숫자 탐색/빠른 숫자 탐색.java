@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
-    static int r, c, count = 0;
+    static int r, c;
     static int[][] arr;
     static boolean[][] visited;
     static int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
