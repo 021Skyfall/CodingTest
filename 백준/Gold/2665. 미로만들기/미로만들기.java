@@ -54,6 +54,6 @@ public class Main {
             }
         }
 
-        return change[n - 1][n - 1];
+        return 0;
     }
 }
