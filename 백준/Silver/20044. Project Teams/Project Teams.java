@@ -8,7 +8,12 @@ public class Main {
 
         int n = Integer.parseInt(br.readLine());
 
-        int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] arr = new int[n * 2];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < n * 2; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
 
         Arrays.sort(arr);
 
