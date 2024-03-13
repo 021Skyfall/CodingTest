@@ -17,3 +17,8 @@ Coding Test
 프로그래머스 정리 포스트 (https://blog.naver.com/021skyfall/223226310080)   
     
 추후 추천 받은 Leetcode의 문제들도 풀어볼 예정입니다.
+
+
+2024-03-01
+현재는 백준 정렬 문제를 풀고 있습니다
+백준 정리 포스트 (https://021skyfall.github.io/categories/%EB%B0%B1%EC%A4%80/)
