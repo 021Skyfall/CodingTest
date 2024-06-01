@@ -1,4 +1,4 @@
-package Programmers.greedy;
+package Programmers.lvl2.greedy;
 
 import java.util.*;
 
