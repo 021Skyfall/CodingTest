@@ -1,4 +1,4 @@
-package Programmers.lvl1;
+package Programmers.lvl2;
 
 public class PasswordOfTwo {
     public static void main(String[] args) {
